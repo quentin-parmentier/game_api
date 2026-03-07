@@ -35,6 +35,23 @@ export const frenchWords: Array<{ category: string; words: string[] }> = [
     ],
   },
   {
+    category: "Alimentation et boissons",
+    words: [
+      "pomme", "poire", "cerise", "fraise", "framboise", "abricot", "pêche", "prune", "citron",
+      "orange", "pamplemousse", "mangue", "ananas", "banane", "raisin", "melon", "pastèque",
+      "kiwi", "figue", "myrtille", "carotte", "tomate", "courgette", "aubergine", "poivron",
+      "épinard", "brocoli", "chou-fleur", "haricot vert", "artichaut", "asperge", "poireau",
+      "navet", "betterave", "radis", "endive", "céleri", "champignon", "concombre", "petits pois",
+      "riz", "blé", "avoine", "maïs", "orge", "seigle", "quinoa", "lentille", "yaourt",
+      "fromage blanc", "crème fraîche", "kéfir", "mozzarella", "bœuf", "lapin", "dinde", "thon",
+      "cabillaud", "crevette", "palourde", "sardine", "eau", "jus", "thé", "limonade", "orangeade",
+      "lait ribot", "kombucha", "nectar", "rôtir", "mijoter", "griller", "bouillir", "frire",
+      "pocher", "blanchir", "flamber", "poêlon", "marmite", "wok", "saladier", "tamis", "mortier",
+      "écumoire", "mandoline", "vanille", "cannelle", "cumin", "curry", "basilic", "romarin",
+      "coriandre", "safran", "paprika", "gingembre", "miel", "huile", "vinaigre", "noix", "amande",
+    ],
+  },
+  {
     category: "Sports et loisirs",
     words: [
       "football", "tennis", "natation", "basketball", "volleyball", "rugby", "cyclisme",
