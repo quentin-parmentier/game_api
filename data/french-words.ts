@@ -407,7 +407,7 @@ export const frenchWords: Array<{ category: string; words: string[] }> = [
       "acajou", "frêne", "sapin", "contreplaqué", "osier", "rotin", "liège", "bois", "châtaignier", "orme",
       "coton", "laine", "soie", "lin", "chanvre", "polyester", "nylon", "velours", "satin", "denim",
       "béton", "ciment", "plâtre", "brique", "tuile", "ardoise", "mortier", "parpaing", "chaux", "gypse",
-      "granit", "marbre", "calcaire", "grès", "basalte", "quartz", "ardoise", "silex", "obsidienne", "schiste",
+      "granit", "marbre", "calcaire", "grès", "basalte", "quartz", "travertin", "silex", "obsidienne", "schiste",
       "verre", "cristal", "céramique", "porcelaine", "faïence", "terre cuite", "grès cérame", "émail", "majolique", "argile",
       "plastique", "caoutchouc", "PVC", "résine", "fibre de verre", "carbone", "kevlar", "polystyrène", "acrylique", "époxy",
       "cuir", "daim", "fourrure", "caoutchouc naturel", "latex", "cellulose", "papier", "carton", "cire", "bitume",
