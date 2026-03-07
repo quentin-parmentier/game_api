@@ -236,4 +236,23 @@ export const frenchWords: Array<{ category: string; words: string[] }> = [
       "chimie", "physique", "biologie", "géologie", "astrophysique",
     ],
   },
+  {
+    category: "Politique et société",
+    words: [
+      "démocratie", "république", "monarchie", "élection", "suffrage", "constitution", "parlement", "sénat",
+      "gouvernement", "président", "ministre", "loi", "décret", "citoyen", "citoyenneté", "liberté",
+      "égalité", "fraternité", "droits", "justice", "tribunal", "État", "nation", "souveraineté",
+      "diplomatie", "ambassade", "traité", "alliance", "parti", "candidat", "vote", "référendum",
+      "assemblée", "commune", "région", "département", "mairie", "préfecture", "impôt", "budget",
+      "dette", "réforme", "idéologie", "socialisme", "libéralisme", "conservatisme", "communisme",
+      "fascisme", "anarchisme", "fédéralisme", "nationalisme", "populisme", "laïcité", "solidarité",
+      "intégration", "immigration", "minorité", "discrimination", "racisme", "féminisme", "syndicat",
+      "grève", "manifestation", "révolution", "dictature", "autoritarisme", "censure", "propagande",
+      "corruption", "transparence", "responsabilité", "mandat", "coalition", "opposition", "majorité",
+      "pluralisme", "consensus", "débat", "campagne", "programme", "scrutin", "abstention", "urne",
+      "pouvoir", "institution", "pétition", "diplomate", "séparatisme", "lobbying", "révolte",
+      "protestation", "contre-pouvoir", "médiation", "participation", "représentation", "légitimité",
+      "autonomie", "recours", "juridiction", "société",
+    ],
+  },
 ];
