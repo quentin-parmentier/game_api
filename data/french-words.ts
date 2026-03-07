@@ -398,4 +398,19 @@ export const frenchWords: Array<{ category: string; words: string[] }> = [
       "Jack Sparrow", "Quasimodo", "Jean Valjean", "Edmond Dantès",
     ],
   },
+  {
+    category: "Matériaux",
+    words: [
+      "acier", "fer", "cuivre", "aluminium", "or", "argent", "bronze", "laiton", "titane", "nickel",
+      "zinc", "plomb", "étain", "chrome", "tungstène", "platine", "cobalt", "manganèse", "fonte", "inox",
+      "chêne", "pin", "hêtre", "noyer", "érable", "bouleau", "teck", "bambou", "balsa", "ébène",
+      "acajou", "frêne", "sapin", "contreplaqué", "osier", "rotin", "liège", "bois", "châtaignier", "orme",
+      "coton", "laine", "soie", "lin", "chanvre", "polyester", "nylon", "velours", "satin", "denim",
+      "béton", "ciment", "plâtre", "brique", "tuile", "ardoise", "mortier", "parpaing", "chaux", "gypse",
+      "granit", "marbre", "calcaire", "grès", "basalte", "quartz", "ardoise", "silex", "obsidienne", "schiste",
+      "verre", "cristal", "céramique", "porcelaine", "faïence", "terre cuite", "grès cérame", "émail", "majolique", "argile",
+      "plastique", "caoutchouc", "PVC", "résine", "fibre de verre", "carbone", "kevlar", "polystyrène", "acrylique", "époxy",
+      "cuir", "daim", "fourrure", "caoutchouc naturel", "latex", "cellulose", "papier", "carton", "cire", "bitume",
+    ],
+  },
 ];
