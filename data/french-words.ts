@@ -444,4 +444,19 @@ export const frenchWords: Array<{ category: string; words: string[] }> = [
       "pergola", "canapé-lit", "divan", "pouf", "chevet", "matelas", "couette", "oreiller",
     ],
   },
+  {
+    category: "Mythologie et légendes",
+    words: [
+      "Zeus", "Héra", "Poséidon", "Hadès", "Athéna", "Apollon", "Artémis", "Arès", "Aphrodite", "Hermès",
+      "Héphaïstos", "Déméter", "Dionysos", "Perséphone", "Héraclès", "Achille", "Ulysse", "Orphée", "Thésée", "Persée",
+      "Méduse", "Minotaure", "Cyclope", "Centaure", "Sirène", "Chimère", "Sphinx", "Hydre", "Pégase", "Cerbère",
+      "Jupiter", "Junon", "Neptune", "Pluton", "Minerve", "Mars", "Vénus", "Mercure", "Vulcain", "Saturne",
+      "Énée", "Romulus", "Rémus", "Prométhée", "Pandore", "Icare", "Dédale", "Narcisse", "Midas", "Sisyphe",
+      "Odin", "Thor", "Loki", "Freya", "Baldr", "Tyr", "Heimdall", "Valkyrie", "Viking", "Mjöllnir",
+      "Yggdrasil", "Ragnarök", "Valhalla", "dragon", "phénix", "licorne", "griffon", "basilic", "manticore", "kraken",
+      "Osiris", "Isis", "Horus", "Rê", "Anubis", "Thot", "Seth", "Néfertiti", "pharaon", "scarabée",
+      "Merlin", "Excalibur", "Arthur", "Lancelot", "Guenièvre", "Gauvain", "Perceval", "Morgane", "Camelot", "Avalon",
+      "leprechaun", "banshee", "druide", "elfe", "nain", "troll", "ogre", "fée", "fantôme", "lutin",
+    ],
+  },
 ];
