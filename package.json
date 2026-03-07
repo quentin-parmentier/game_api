@@ -1,0 +1,12 @@
+{
+  "name": "game-api",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "bun run src/index.ts",
+    "dev": "bun --hot run src/index.ts",
+    "seed": "bun run scripts/seed.ts",
+    "generate-key": "bun run scripts/generate-key.ts",
+    "test": "bun test"
+  }
+}
