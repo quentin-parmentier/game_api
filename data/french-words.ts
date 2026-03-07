@@ -237,6 +237,26 @@ export const frenchWords: Array<{ category: string; words: string[] }> = [
     ],
   },
   {
+    category: "Philosophie et religion",
+    words: [
+      "philosophie", "métaphysique", "épistémologie", "ontologie", "éthique", "esthétique",
+      "logique", "dialectique", "rationalisme", "empirisme", "idéalisme", "matérialisme",
+      "existentialisme", "phénoménologie", "structuralisme", "pragmatisme", "stoïcisme",
+      "épicurisme", "scepticisme", "cynisme", "platonisme", "aristotélisme", "thomisme",
+      "humanisme", "nihilisme", "relativisme", "absurde", "conscience", "raison", "vérité",
+      "connaissance", "essence", "existence", "âme", "esprit", "religion", "théologie",
+      "christianisme", "islam", "judaïsme", "bouddhisme", "hindouisme", "athéisme",
+      "agnosticisme", "déisme", "polythéisme", "monothéisme", "spiritualité", "mysticisme",
+      "prière", "méditation", "rituel", "sacré", "profane", "dogme", "doctrine", "prophète",
+      "messie", "divin", "grâce", "rédemption", "péché", "paradis", "enfer", "purgatoire",
+      "résurrection", "incarnation", "trinité", "baptême", "communion", "confession", "mosquée",
+      "église", "temple", "synagogue", "pèlerinage", "martyr", "saint", "morale", "vertu",
+      "vice", "devoir", "bien", "mal", "transcendance", "immanence", "infini", "karma",
+      "nirvana", "dharma", "Torah", "Coran", "Bible", "laïcité", "providence", "panthéisme",
+      "animisme", "réincarnation", "syllogisme", "contingence",
+    ],
+  },
+  {
     category: "Politique et société",
     words: [
       "démocratie", "république", "monarchie", "élection", "suffrage", "constitution", "parlement", "sénat",
