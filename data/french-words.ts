@@ -428,4 +428,20 @@ export const frenchWords: Array<{ category: string; words: string[] }> = [
       "cuir", "daim", "fourrure", "caoutchouc naturel", "latex", "cellulose", "papier", "carton", "cire", "bitume",
     ],
   },
+  {
+    category: "Maison et mobilier",
+    words: [
+      "canapé", "fauteuil", "table", "chaise", "lit", "armoire", "commode", "bibliothèque", "étagère", "buffet",
+      "tabouret", "banc", "tiroir", "placard", "penderie", "dressing", "secrétaire", "bahut", "berceau", "ottomane",
+      "salon", "chambre", "cuisine", "couloir", "escalier", "grenier", "cave", "garage", "bureau", "vestibule",
+      "terrasse", "balcon", "véranda", "salle de bain", "salle à manger", "réfrigérateur", "four", "lave-vaisselle",
+      "machine à laver", "aspirateur", "micro-ondes", "grille-pain", "cafetière", "sèche-linge", "congélateur",
+      "hotte", "robot ménager", "rideau", "tableau", "miroir", "tapis", "coussin", "vase", "bougie", "cadre",
+      "horloge", "plante", "lustre", "lampe", "abat-jour", "parquet", "carrelage", "clé", "serrure", "poignée",
+      "sonnette", "paillasson", "portail", "clôture", "fenêtre", "volet", "store", "radiateur", "cheminée",
+      "robinet", "baignoire", "douche", "lavabo", "toilettes", "bidet", "moquette", "lambris", "plafond", "mur",
+      "sol", "porte", "interrupteur", "prise électrique", "boîte aux lettres", "jardin", "haie", "tonnelle",
+      "pergola", "canapé-lit", "divan", "pouf", "chevet", "matelas", "couette", "oreiller",
+    ],
+  },
 ];
