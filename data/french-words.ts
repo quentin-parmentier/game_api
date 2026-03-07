@@ -180,4 +180,23 @@ export const frenchWords: Array<{ category: string; words: string[] }> = [
       "aéroport", "gare", "port", "ambassade", "tourisme",
     ],
   },
+  {
+    category: "Histoire et civilisations",
+    words: [
+      "Antiquité", "Renaissance", "Révolution", "République", "Préhistoire", "Néolithique",
+      "Paléolithique", "Pharaon", "Pyramide", "Momie", "Hiéroglyphe", "Sphinx", "Sarcophage",
+      "Papyrus", "Gladiateur", "Légion", "Sénat", "Forum", "Colisée", "Amphithéâtre", "Acropole",
+      "Démocratie", "Oligarchie", "Tyrannie", "Croisade", "Chevalier", "Seigneur", "Serf",
+      "Féodalité", "Cathédrale", "Inquisition", "Réforme", "Imprimerie", "Conquête",
+      "Colonisation", "Esclavage", "Abolition", "Guillotine", "Napoléon", "Waterloo", "Traité",
+      "Constitution", "Empire", "Monarchie", "Couronnement", "Sacre", "Couronne", "Sceptre",
+      "Trône", "Concordat", "Alliance", "Guerre", "Bataille", "Siège", "Armistice", "Capitulation",
+      "Victoire", "Viking", "Aztèque", "Maya", "Inca", "Babylone", "Phénicien", "Celte",
+      "Gaulois", "Romain", "Grec", "Byzantin", "Ottoman", "Mongol", "Menhir", "Dolmen",
+      "Citadelle", "Palais", "Vestige", "Archéologie", "Parchemin", "Manuscrit", "Chronologie",
+      "Civilisation", "Calendrier", "Esclave", "Patricien", "Plébéien", "Légionnaire", "Barbare",
+      "Nomade", "Caravane", "Charlemagne", "Sultan", "Califat", "Château", "Médiéval",
+      "Moyen Âge", "Parlement", "Tribut", "Défaite", "Philosophe", "Découverte", "Dynastie",
+    ],
+  },
 ];
