@@ -399,6 +399,21 @@ export const frenchWords: Array<{ category: string; words: string[] }> = [
     ],
   },
   {
+    category: "Émotions et sentiments",
+    words: [
+      "joie", "tristesse", "colère", "amour", "peur", "surprise", "honte", "fierté", "jalousie", "envie",
+      "dégoût", "mépris", "anxiété", "angoisse", "sérénité", "bonheur", "mélancolie", "nostalgie", "euphorie", "dépression",
+      "frustration", "déception", "espoir", "désespoir", "confiance", "méfiance", "tendresse", "affection", "passion", "haine",
+      "indignation", "admiration", "gratitude", "culpabilité", "remords", "regret", "solitude", "ennui", "excitation", "enthousiasme",
+      "apathie", "indifférence", "compassion", "empathie", "pitié", "terreur", "effroi", "panique", "stress", "soulagement",
+      "satisfaction", "plaisir", "extase", "ravissement", "émerveillement", "stupeur", "perplexité", "confusion", "irritation", "exaspération",
+      "rage", "rancœur", "ressentiment", "amertume", "dédain", "arrogance", "humilité", "timidité", "gêne", "embarras",
+      "pudeur", "curiosité", "fascination", "respect", "vénération", "dévotion", "attachement", "obsession", "inquiétude", "appréhension",
+      "torpeur", "accablement", "découragement", "désillusion", "lassitude", "langueur", "ardeur", "ferveur", "émoi", "trouble",
+      "allégresse", "gaieté", "morosité", "spleen", "bienveillance", "hostilité", "agressivité", "douceur", "amour-propre", "exaltation",
+    ],
+  },
+  {
     category: "Matériaux",
     words: [
       "acier", "fer", "cuivre", "aluminium", "or", "argent", "bronze", "laiton", "titane", "nickel",
