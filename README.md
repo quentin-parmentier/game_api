@@ -195,6 +195,42 @@ The test suite starts the server automatically using the test database and cover
 
 ## Deployment
 
+### Docker / Render (recommandé)
+
+#### 1. Créer un Web Service sur Render
+
+1. Connectez-vous sur [Render](https://render.com) et créez un **New Web Service**.
+2. Connectez votre dépôt GitHub et sélectionnez **Environment: Docker** — Render utilisera automatiquement le `Dockerfile` à la racine.
+
+#### 2. Variables d'environnement à configurer
+
+| Variable | Valeur | Obligatoire ? | Note |
+|---|---|---|---|
+| `DB_PATH` | `/data/game.db` | ✅ Oui | Pointe vers le disque persistant |
+| `ADMIN_SECRET` | une chaîne secrète au choix | ✅ Oui | Protège `POST /api/keys` |
+| `PORT` | *(ne pas définir)* | ❌ Non | Render l'injecte automatiquement |
+
+#### 3. Monter un disque persistant
+
+Dans les paramètres du service Render, ajoutez un **Persistent Disk** :
+
+- **Mount Path** : `/data`
+
+> ⚠️ **Sans disque persistant, la base de données est perdue à chaque redéploiement.**
+
+#### 4. Initialisation (une seule fois après le premier déploiement)
+
+Ouvrez le **Shell** Render et exécutez :
+
+```bash
+bun run seed
+bun run generate-key production
+```
+
+> **Note** : ne relancez pas `bun run seed` sauf si vous souhaitez **réinitialiser complètement** les données — cela écrasera les mots existants.
+
+---
+
 ### Railway
 
 1. Create a new project from this repo on [Railway](https://railway.app).
@@ -203,11 +239,10 @@ The test suite starts the server automatically using the test database and cover
 4. After first deploy, open a Railway shell and run `bun run seed` to populate the database.
 5. Generate your first API key: `bun run generate-key production`.
 
-### Render
+### Render (sans Docker)
 
 1. Create a **Web Service** on [Render](https://render.com) pointing to this repo.
-2. Set **Build command** to `bun install` and **Start command** to `bun run src/index.ts`.
+2. Set **Language** to `Node`, **Build command** to `bun install` and **Start command** to `bun run src/index.ts`.
 3. Add environment variables in Render's dashboard.
-4. Use the Render shell (or a one-off job) to run `bun run seed` and `bun run generate-key`.
-
-> **Tip**: Set `DB_PATH=/data/game.db` and mount a persistent disk at `/data` so the database survives redeploys.
+4. Mount a persistent disk at `/data` and set `DB_PATH=/data/game.db`.
+5. Use the Render shell to run `bun run seed` and `bun run generate-key production`.
