@@ -1,0 +1,25 @@
+name: Keep Alive
+
+on:
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    permissions: {}
+    steps:
+      - name: Skip if RENDER_URL is not defined
+        if: ${{ !secrets.RENDER_URL }}
+        run: |
+          echo "⚠️  RENDER_URL secret is not defined — skipping keep-alive ping."
+          echo "Go to Settings → Secrets and variables → Actions and add a secret named RENDER_URL with your Render service URL (e.g. https://game-api-xxxx.onrender.com)."
+
+      - name: Ping /health
+        if: ${{ secrets.RENDER_URL }}
+        run: |
+          echo "🏓 Pinging ${{ secrets.RENDER_URL }}/health …"
+          curl -f --silent --show-error "${{ secrets.RENDER_URL }}/health"
+          echo ""
+          echo "✅ Service is alive."

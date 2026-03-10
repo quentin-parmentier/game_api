@@ -244,5 +244,22 @@ bun run generate-key production
 1. Create a **Web Service** on [Render](https://render.com) pointing to this repo.
 2. Set **Language** to `Node`, **Build command** to `bun install` and **Start command** to `bun run src/index.ts`.
 3. Add environment variables in Render's dashboard.
+4. Use the Render shell (or a one-off job) to run `bun run seed` and `bun run generate-key`.
+
+> **Tip**: Set `DB_PATH=/data/game.db` and mount a persistent disk at `/data` so the database survives redeploys.
+
+### Keep-alive (GitHub Actions)
+
+Render automatically puts free-tier services to sleep after **15 minutes of inactivity** (subsequent requests then take ~30 s to wake up). To prevent this, a GitHub Actions workflow pings the `/health` endpoint every 10 minutes.
+
+The workflow is already present in `.github/workflows/keep-alive.yml` and activates as soon as the `RENDER_URL` secret is defined.
+
+**Setup:**
+
+1. Go to **Settings → Secrets and variables → Actions** in your GitHub repository.
+2. Click **New repository secret**.
+3. Name: `RENDER_URL` — Value: the full URL of your Render service (e.g. `https://game-api-xxxx.onrender.com`).
+
+Once the secret is saved, the workflow will run every 10 minutes and keep the service awake. If `RENDER_URL` is not set, the workflow skips gracefully with an explanatory message instead of failing.
 4. Mount a persistent disk at `/data` and set `DB_PATH=/data/game.db`.
 5. Use the Render shell to run `bun run seed` and `bun run generate-key production`.
