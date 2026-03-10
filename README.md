@@ -206,28 +206,37 @@ The test suite starts the server automatically using the test database and cover
 
 | Variable | Valeur | Obligatoire ? | Note |
 |---|---|---|---|
-| `DB_PATH` | `/data/game.db` | ✅ Oui | Pointe vers le disque persistant |
+| `DB_PATH` | `/tmp/game.db` (gratuit) ou `/data/game.db` (payant) | ✅ Oui | Voir ci-dessous |
 | `ADMIN_SECRET` | une chaîne secrète au choix | ✅ Oui | Protège `POST /api/keys` |
 | `PORT` | *(ne pas définir)* | ❌ Non | Render l'injecte automatiquement |
 
-#### 3. Monter un disque persistant
+**Plan gratuit** : utilisez `DB_PATH=/tmp/game.db`. Le répertoire `/tmp` est le seul endroit accessible en écriture. La base de données est remise à zéro à chaque redémarrage, mais c'est acceptable car les mots proviennent du seed statique qui s'exécute automatiquement au démarrage.
 
-Dans les paramètres du service Render, ajoutez un **Persistent Disk** :
+**Plan payant (disque persistant)** : ajoutez un **Persistent Disk** monté sur `/data` et utilisez `DB_PATH=/data/game.db`.
 
-- **Mount Path** : `/data`
+#### 3. Initialisation automatique
 
-> ⚠️ **Sans disque persistant, la base de données est perdue à chaque redéploiement.**
+Le script `start.sh` exécute le seed automatiquement à chaque démarrage du conteneur — aucune intervention manuelle n'est nécessaire. Il n'est donc pas non plus nécessaire d'avoir accès au shell Render.
 
-#### 4. Initialisation (une seule fois après le premier déploiement)
+> **Note** : le seed réinitialise complètement les mots à chaque démarrage (comportement normal et attendu avec `/tmp`).
 
-Ouvrez le **Shell** Render et exécutez :
+#### 4. Générer une clé API (une seule fois)
+
+Si vous avez accès au shell Render (plan payant), exécutez :
 
 ```bash
-bun run seed
 bun run generate-key production
 ```
 
-> **Note** : ne relancez pas `bun run seed` sauf si vous souhaitez **réinitialiser complètement** les données — cela écrasera les mots existants.
+Sur le plan gratuit, utilisez l'endpoint `POST /api/keys` avec le header `x-admin-secret` :
+
+```bash
+curl -X POST https://<your-service>.onrender.com/api/keys \
+  -H "x-admin-secret: <ADMIN_SECRET>" \
+  -H "Content-Type: application/json" \
+  -d '{"name": "production"}'
+# Response: { "key": "a3f2...", "name": "production" }
+```
 
 ---
 
@@ -261,5 +270,3 @@ The workflow is already present in `.github/workflows/keep-alive.yml` and activa
 3. Name: `RENDER_URL` — Value: the full URL of your Render service (e.g. `https://game-api-xxxx.onrender.com`).
 
 Once the secret is saved, the workflow will run every 10 minutes and keep the service awake. If `RENDER_URL` is not set, the workflow skips gracefully with an explanatory message instead of failing.
-4. Mount a persistent disk at `/data` and set `DB_PATH=/data/game.db`.
-5. Use the Render shell to run `bun run seed` and `bun run generate-key production`.

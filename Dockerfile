@@ -10,12 +10,13 @@ RUN bun install
 COPY src/ ./src/
 COPY data/ ./data/
 COPY scripts/ ./scripts/
+COPY start.sh ./
 
-# Note: do NOT run the seed here.
-# Run `bun run seed` manually once after the first deploy via the Render shell.
-# On Render, set DB_PATH=/data/game.db and mount a Persistent Disk at /data
-# so the database survives container restarts and redeploys.
+RUN chmod +x start.sh
 
 EXPOSE 3000
 
-CMD ["bun", "run", "src/index.ts"]
+# start.sh seeds the DB then starts the server.
+# On Render free tier, set DB_PATH=/tmp/game.db (writable).
+# On Render paid tier with a Persistent Disk mounted at /data, use DB_PATH=/data/game.db.
+CMD ["./start.sh"]
